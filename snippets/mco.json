@@ -1,0 +1,85 @@
+{
+	"Header": {
+		"prefix": "region header",
+		"body": [
+			"//*********************************************************",
+			"//",
+			"// ${1:username}",
+			"// ${2|Ardis Information Systems NV,Ardis US Inc.|}",
+			"// Last Update: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR}",
+			"//",
+			"// - - - - - - - - - - - - - - - -",
+			"// ${3:description}",
+			"// - - - - - - - - - - - - - - - -",
+			"//",
+			"//*********************************************************"
+		],
+		"description": "Insert macro header comment"
+	},
+	"Section": {
+		"prefix": "region section",
+		"body": [
+			"//---------------------------",
+			"// ${1|Variables,Init,Main,End,Sub Functions|}",
+			"//---------------------------"
+		],
+		"description": "Insert macro section comment"
+	},
+	"Sub Function": {
+		"prefix": "region function",
+		"body": [
+			"[${1:sub}]",
+			"// Add code here",
+			"",
+			"//EndRegion",
+			""
+		],
+		"description": "Insert sub function body"
+	},
+	"Sample Import": {
+		"prefix": "Sample import",
+		"body": [
+			"[Import_Lines]",
+			"// Initialize 'linecounter' and 'delim' prior to running this function",
+			"// Update linecounter",
+			"linecounter +=  1",
+			"",
+			"// Replace '<tags>' in sample code",
+			"// Read temporary field data",
+			"<tmpField>  =   SUBFIELD (import ; 1 ; delim)",
+			"",
+			"// Replace '<tags>' in sample code",
+			"Set (\"<file name.type>\" ; \"<table field>\" ; \"<value>\" ; linecounter)",
+			"",
+			"//EndRegion",
+			""
+		],
+		"description": "Insert sample code for ascii import"
+	},
+	"Sample SQL Connstr": {
+		"prefix": "Sample SQL Connstr",
+		"body": [
+			"// SQL connection",
+			"sqlSrv     =   \"${1:.\\SQLEXPRESS}\"",
+			"sqlDb      =   \"${2:Database}\"",
+			"sqlTrusted =   \"${3|yes,no|}\"",
+			"sqlUser    =   \"${4:ardis}\"",
+			"sqlPsw     =   \"${5:ardis}\"",
+			"sqlLogin   =   IF (sqlTrusted IS \"yes\" ; \"Trusted_Connection=Yes\" ; \"User ID=\" + sqlUser + \";\" + \"Password=\" + sqlPsw)",
+			"sqlConnstr =   STR (\"Provider=SQLOLEDB\" ; \"Data Source=\" + sqlSrv ; \"Initial Catalog=\" + sqlDb ; sqlLogin)",
+			""
+		],
+		"description": "Insert sample code for SQL connection string"
+	},
+	"Sample ini file": {
+		"prefix": "Sample INI",
+		"body": [
+			"// Settings file",
+			"iniDir     =   CURRENTMCO SUBSTR \"\\\"",
+			"iniName    =   \"settings\"",
+			"iniPath    =   PATH (iniDir ; iniName ; \"ini\")",
+			""
+		],
+		"description": "Add link to settings file"
+	}
+}

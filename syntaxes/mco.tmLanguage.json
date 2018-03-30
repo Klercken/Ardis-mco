@@ -1,0 +1,83 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "MCO",
+	"patterns": [
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#functiongroups"
+		}
+	],
+	"repository": {
+		"functions": {
+			"patterns": [
+				{
+					"name": "keyword.command.mco",
+					"match": "(?i)\\b(SQRT|AND|OR|NOT|XOR|INT|IS|LIKE|ISNOT|ISBETWEEN|ISEMPTY|ISNOTEMPTY|ISNUMBER|LICENSE|IF|VAL|SUBSTR|LEN|LEFT|RIGHT|ROUND|RTRIM|LTRIM|REPEAT|CHR|ASC|BC|MOD|MIN|MAX|INSTR|FRACTION|TITLE|SUCC|TEXT|QUOTE|REPLACE|FUNCTION|FILETIME|NOTE|DIST|RND|LOOKUP|ABS|SHIFT|SIN|COS|TAN|COT|ARCSIN|ARCCOS|ARCTAN|ARCCOT|ATAN2|QUADRANT|REVERSE|DISKSPACE|CENTERPOINT|ARCSEGMENTANGLE|BULGE|INTERSECT|ROTATE|STR|CONCAT|DATE|TIME|SUM|VAR|DIR|EVAL|EXIST|ISFILEINUSE|PATH|FIELD|READ|ISNEWER|MATLIST|EDGELIST|GETMATTHICK|SUBFIELD|GETMATPROP|CNCVARS|GETMIN|GETMAX|GETFIRST|GETCOUNT|GET|REMOVEITEM|OFFCUTVALUE|COMMUNAL|RGB)\\b(?-i)"
+				},
+				{
+					"name": "keyword.control.mco",
+					"match": "(?i)\\b(LABEL|Wizard|Axis|REPORT|EXPORT|RESULT|RUN|CALL|RUNLINK|OPEN|SAVE|ReplaceByValue|OPTIMIZE|PartQty|SheetQty|RestToSheet|RestToPart|RestToScrap|StripBridge|SheetSize|LaySelect|LayTurnDir|TrimToScrap|Sort|SortOpt|Bundle|Activate|Hide|Msg|AddPart|InsPart|OpenPart|Insert|ShowQuestions|MergeQuestions|Exit|Break|Macro|MacroImport|MacroLoop|SynchRes|Set|EXCLUDE|ProducePart|CheckClamps|SHEETLABEL|LayPartOutD|LayStripGroupParts|STRIPDIV|LayRestID|IPC|LayPicture|LayRecalc|SheetNormalize|LayCuts|Status|WRITEFILE|ASKPATH|INPUT|EDIT|WAIT|DELFILE|COPYFILE|SetDS|ASKDIR|LayTurn|PartPicture|Preview|SplitParts|LayInsertHeadcut|PartUnique|MatValidate|ReportToFile|Routing|StripDivGap|SwapTrims|PocketCalc|JoinLays|CLOSE|Sign|DelFolder|StripBlock|MSG)\\b(?-i)"
+				}
+			]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"name": "string.quoted.double.mco",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": [
+					]
+				},
+				{
+					"name": "string.quoted.single.mco",
+					"begin": "'",
+					"end": "'",
+					"patterns": [
+					]
+				},
+				{
+					"name": "string.unquoted.mco",
+					"match": "\\$.+\\n"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"match": "\\b((0(x|X)[0-9a-fA-F]([0-9a-fA-F']*[0-9a-fA-F])?)|(0(b|B)[01]([01']*[01])?)|(([0-9]([0-9']*[0-9])?\\.?[0-9]*([0-9']*[0-9])?)|(\\.[0-9]([0-9']*[0-9])?))((e|E)(\\+|-)?[0-9]([0-9']*[0-9])?)?)(L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?\\b",
+					"name": "constant.numeric.mco"
+				}
+			]	
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.mco",
+					"begin": "//",
+					"end": "(?=\\n)"
+				}
+			]
+		},
+		"functiongroups": {
+			"patterns": [
+				{
+					"match": "^(\\[)(.*?)(\\])",
+					"name": "markup.heading.mco"
+				}
+			]
+		}
+	},
+	"scopeName": "source.mco"
+}
