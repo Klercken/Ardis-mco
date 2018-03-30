@@ -9,7 +9,6 @@ Welcome to Visual Studio Code extension for Ardis macro scripting! The mco exten
 
 ### Syntax highlighting
 
-
 ### Snippets
 
 Comment macro structures
