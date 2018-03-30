@@ -2,7 +2,7 @@
     "name": "mco",
     "displayName": "Ardis scripting language",
     "description": "Ardis macro language",
-    "version": "0.0.2",
+    "version": "0.2.0",
     "publisher": "Ardis",
     "icon": "icon.png",
     "engines": {
@@ -12,25 +12,39 @@
         "Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "mco",
-            "aliases": ["MCO", "mco"],
-            "extensions": [".mco", ".rpt"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "mco",
-            "scopeName": "source.mco",
-            "path": "./syntaxes/mco.tmLanguage.json"
-        }],
-        "commands": [{
-            "command": "extension.insertHeader",
-            "title": "Header",
-            "category": "Insert"
-        }],
-        "snippets": [{
-            "language": "mco",
-            "path": "./snippets/mco.json"
-        }]
+        "languages": [
+            {
+                "id": "mco",
+                "aliases": [
+                    "MCO",
+                    "mco"
+                ],
+                "extensions": [
+                    ".mco",
+                    ".rpt"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "mco",
+                "scopeName": "source.mco",
+                "path": "./syntaxes/mco.tmLanguage.json"
+            }
+        ],
+        "commands": [
+            {
+                "command": "extension.insertHeader",
+                "title": "Header",
+                "category": "Insert"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "mco",
+                "path": "./snippets/mco.json"
+            }
+        ]
     }
 }

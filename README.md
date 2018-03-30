@@ -14,15 +14,15 @@ Welcome to Visual Studio Code extension for Ardis macro scripting! The mco exten
 
 Comment macro structures
 
-![Comment](./images/comment.gif)
+![Comment](https://raw.githubusercontent.com/Klercken/Ardis-mco/master/images/comment.gif)
 
 Sub-functions with folding support
 
-![SubFunctions](./images/subfunctions.gif)
+![SubFunctions](https://raw.githubusercontent.com/Klercken/Ardis-mco/master/images/subfunctions.gif)
 
 Frequently used code
 
-![FreqCode](./images/freqcode.gif)
+![FreqCode](https://raw.githubusercontent.com/Klercken/Ardis-mco/master/images/freqcode.gif)
 
 ## Requirements
 
