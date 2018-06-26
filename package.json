@@ -1,50 +1,56 @@
 {
-    "name": "mco",
-    "displayName": "Ardis scripting language",
-    "description": "Ardis macro language",
-    "version": "0.2.0",
-    "publisher": "Ardis",
-    "icon": "icon.png",
-    "engines": {
-        "vscode": "^1.19.0"
-    },
-    "categories": [
-        "Languages"
-    ],
-    "contributes": {
-        "languages": [
-            {
-                "id": "mco",
-                "aliases": [
-                    "MCO",
-                    "mco"
-                ],
-                "extensions": [
-                    ".mco",
-                    ".rpt"
-                ],
-                "configuration": "./language-configuration.json"
-            }
-        ],
-        "grammars": [
-            {
-                "language": "mco",
-                "scopeName": "source.mco",
-                "path": "./syntaxes/mco.tmLanguage.json"
-            }
-        ],
-        "commands": [
-            {
-                "command": "extension.insertHeader",
-                "title": "Header",
-                "category": "Insert"
-            }
-        ],
-        "snippets": [
-            {
-                "language": "mco",
-                "path": "./snippets/mco.json"
-            }
-        ]
-    }
+	"name": "mco",
+	"displayName": "Ardis scripting language",
+	"description": "Ardis macro language",
+	"version": "0.2.2",
+	"publisher": "Ardis",
+	"icon": "icon.png",
+	"engines": {
+		"vscode": "^1.19.0"
+	},
+	"categories": [
+		"Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "mco",
+				"aliases": [
+					"Ardis",
+					"MCO",
+					"mco"
+				],
+				"extensions": [
+					".mco",
+					".rpt"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "mco",
+				"scopeName": "source.mco",
+				"path": "./syntaxes/mco.tmLanguage.json"
+			}
+		],
+		"commands": [
+			{
+				"command": "extension.insertHeader",
+				"title": "Header",
+				"category": "Insert"
+			}
+		],
+		"snippets": [
+			{
+				"language": "mco",
+				"path": "./snippets/mco.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "79467570-31a9-414e-a2a6-7796a07d37cd",
+		"publisherId": "959ccc1e-7ef3-465b-b0f3-694473360b2b",
+		"publisherDisplayName": "Kenny De Klerck"
+	}
 }
