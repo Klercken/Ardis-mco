@@ -1,6 +1,6 @@
 # ARDIS mco extension
 
-Welcome to Visual Studio Code extension for Ardis macro scripting! The mco extension makes it easy to code your Ardis macros in Visual Studio Code, with an expanding set of functionalities:
+__Welcome__ to Visual Studio Code extension for Ardis macro scripting! The mco extension makes it easy to code your Ardis macros in Visual Studio Code, with an expanding set of functionalities:
 
 * Syntax highlighting for Ardis macros
 * Snippets for macros
